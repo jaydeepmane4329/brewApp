@@ -1,0 +1,73 @@
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  justify-content: space-around;
+}
+.container {
+  background: grey;
+  opacity: 0.5;
+  width: fit-content;
+  padding: 5px 30px 0px 5px;
+  border-radius: 5px;
+}
+
+.trending_topics {
+  margin: auto;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+.trending_topics > .scroll_animation {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  position: relative;
+  justify-content: flex-start;
+  animation-name: smooth_scroll;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.trending_topics .card {
+  flex-shrink: 0;
+  height: 30px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  border-radius: 100px;
+  border: solid 1px grey;
+  background-color: rgb(247, 244, 244);
+}
+.card {
+  border-radius: 5px;
+  background-color: white;
+}
+.card:hover {
+  background-color: black;
+  color: white;
+}
+
+@keyframes smooth_scroll {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .main > img {
+    width: 60vw;
+  }
+  .features {
+    flex-direction: column;
+    align-content: stretch;
+  }
+  .features > .card {
+    width: initial;
+  }
+}
